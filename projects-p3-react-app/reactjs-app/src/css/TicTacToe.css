@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.game {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.board {
+  display: grid;
+  gap: 5px;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  font-size: 36px;
+  text-align: center;
+  line-height: 60px;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.square.X {
+  color: #3498db; /* Blue color for X */
+  animation: fadeInX 0.5s ease;
+}
+
+.square.O {
+  color: #e74c3c; /* Red color for O */
+  animation: fadeInO 0.5s ease;
+}
+
+@keyframes fadeInX {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes fadeInO {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.reset {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
